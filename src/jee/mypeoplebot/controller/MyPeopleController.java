@@ -43,7 +43,7 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 public class MyPeopleController extends MultiActionController{
 	
 	private static final String API_URL_PREFIX = "https://apis.daum.net";
-	private static final String MYPEOPLE_BOT_APIKEY = "031949b0f66106284d58ab0453bd5458f7d7782c";
+	private static final String MYPEOPLE_BOT_APIKEY = "[MYPEOPLE BOT API]";
 	private static final String API_URL_POSTFIX = "&apikey="+MYPEOPLE_BOT_APIKEY;
 	
 	@RequestMapping("/mypeople/callback")
