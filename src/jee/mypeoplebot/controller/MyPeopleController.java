@@ -41,7 +41,9 @@ import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 @Controller
 public class MyPeopleController extends MultiActionController{
-	
+	/**
+	 * 마플정보 message.bot/
+	 */
 	private static final String API_URL_PREFIX = "https://apis.daum.net";
 	private static final String MYPEOPLE_BOT_APIKEY = "[MYPEOPLE BOT API]";
 	private static final String API_URL_POSTFIX = "&apikey="+MYPEOPLE_BOT_APIKEY;
@@ -223,6 +225,12 @@ public class MyPeopleController extends MultiActionController{
 		
 	}
 
+	/**
+	 * 
+	 * @param target 에게 보내는 메시지면 "group", 친구에게 보내는 것인면 "buddy"
+	 * @param targetId 마이피플 친구 또는 그룹아이디
+	 * @param msg 전달될 메시지 내용
+	 */
 	private void sendMessage(String target, String targetId, String msg) {
 		//
 		String url = API_URL_PREFIX + "/mypeople/" + target + "/send.json";
